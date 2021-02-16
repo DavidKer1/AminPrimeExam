@@ -15,7 +15,7 @@ exports.registerUser = async (req,res) => {
     res.status(200).json({msg : 'Usuario Creado Correctamente'});
   } catch (error) {
     const sequelizeErrors = error.errors.map(err => err.message);
-    res.status(500).json({errors: {msg: sequelizeErrors}})
+    res.json({errors: {msg: 'Usuario ya registrado'}})
   }
 }
 
@@ -27,11 +27,11 @@ exports.loginUser = async (req,res) => {
 
   const user = await Users.findOne({where:{username: req.body.username}})
   if(!user){
-    res.status(400).json({msg: "Usuario no encontrado"})
+    res.status(200).json({errors: {msg: "Contraseña incorrecta o usuario no encontrado"}})
   }
 
   if(!user.validatePassword(req.body.password)){
-    res.json({msg: 'Password Incorrecto'})
+    res.json({errors: {msg: 'Password Incorrecto'}})
   } 
 
   const token = jwt.sign({
