@@ -19,6 +19,13 @@ The app was developed with React Native CLI
 - pg
 - sequelize
 
+The enviromment variables are:
+PORT
+DB_HOST
+DB_PORT
+JWT_KEY
+
+
 ### React Native App
 - react-native-community/masked-view
 - react-navigation/native
