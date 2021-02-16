@@ -24,6 +24,8 @@ The enviromment variables are:
 - DB_HOST
 - DB_PORT
 - JWT_KEY
+
+
 These go in a .env file in the root of the project
 
 ### React Native App
