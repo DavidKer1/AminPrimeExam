@@ -20,11 +20,11 @@ The app was developed with React Native CLI
 - sequelize
 
 The enviromment variables are:
-PORT
-DB_HOST
-DB_PORT
-JWT_KEY
-
+- PORT
+- DB_HOST
+- DB_PORT
+- JWT_KEY
+These go in a .env file in the root of the project
 
 ### React Native App
 - react-native-community/masked-view
